@@ -1,15 +1,8 @@
+//<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+if(google) google.load("prototype", "1.6.0.2");
+
 // This allows us to add observers to element that might not exist in the page,
 // without testing for them first. It will fail silently.
-// e.g. O$('some_DOM_element').observe('click', function(){ alert('this will work')});
-// e.g. O$('some_nonexistant_element').observe('click', function(){ alert('this will fail silently')});
-var O$ = function(id){
-	if($(id)){
-		return $(id);
-	}else{
-		return {'observe' : function(){}};
-	}
-}
-
 var $observe = function(id,eventName,func){
 	if(elem = $(id)){
 		elem.observe(eventName, func);
