@@ -1,6 +1,3 @@
-//<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-try{ google.load("prototype", "1.6.0.2"); }catch(){}
-
 // This allows us to add observers to element that might not exist in the page,
 // without testing for them first. It will fail silently.
 var $observe = function(id,eventName,func){
